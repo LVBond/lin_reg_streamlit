@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 
 
 # Заголовок вашего веб-приложения
-st.title('Линейная регрессия')
+st.title('ЛИНЕЙНАЯ РЕГРЕССИЯ')
 
 # Пример вывода текста и данных
 st.write('Приложение Streamlit для визуализации линейной регрессии по заданным x и y')
