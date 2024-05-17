@@ -1,10 +1,10 @@
 import numpy as np 
 import pandas as pd
 import streamlit as st
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
-#import seaborn as sns
-#from sklearn.linear_model import LinearRegression
+import seaborn as sns
+from sklearn.linear_model import LinearRegression
 
 
 # Заголовок вашего веб-приложения
@@ -46,21 +46,21 @@ if appload_file is not None:
         st.write(f'Коэффициент пересечения {round(w_0, 3)}, коэф наклона {round(w_1[0], 3)}')
 
         # нарисовать график x от y 
-        #st.set_option('deprecation.showPyplotGlobalUse', False)
-        #sns.regplot(data=df, x=x_column, y=y_column, order=1)
-        #st.pyplot()
+        st.set_option('deprecation.showPyplotGlobalUse', False)
+        sns.regplot(data=df, x=x_column, y=y_column, order=1)
+        st.pyplot()
 
         # Создаем график
-        #fig, ax = plt.subplots()
-        #ax.scatter(df[x_column], df[y_column], color='b', label='Данные')
-        #ax.plot(df[x_column], w_1 * df[x_column] + w_0, color='r', label='Линейная регрессия')
-        #ax.set_xlabel(x_column)
-        #ax.set_ylabel(y_column)
-        #ax.set_title('Линейная регрессия')
-        #ax.legend()
+        fig, ax = plt.subplots()
+        ax.scatter(df[x_column], df[y_column], color='b', label='Данные')
+        ax.plot(df[x_column], w_1 * df[x_column] + w_0, color='r', label='Линейная регрессия')
+        ax.set_xlabel(x_column)
+        ax.set_ylabel(y_column)
+        ax.set_title('Линейная регрессия')
+        ax.legend()
 
         # Отображаем график в Streamlit
-        #st.pyplot(fig)
+        st.pyplot(fig)
 
 
 
