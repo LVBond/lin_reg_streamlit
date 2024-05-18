@@ -37,11 +37,11 @@ if appload_file is not None:
         Y = df[y_column]
 
 
-        #model_lr = LinearRegression().fit(X, Y)
+        model_lr = LinearRegression().fit(X, Y)
 
         # выведем на экран параментры модели 
-        #w_0 = model_lr.intercept_
-        #w_1 = model_lr.coef_
+        w_0 = model_lr.intercept_
+        w_1 = model_lr.coef_
 
         st.write(f'Коэффициент пересечения {round(w_0, 3)}, коэф наклона {round(w_1[0], 3)}')
 
